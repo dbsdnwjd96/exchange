@@ -1,28 +1,25 @@
-import logo from './logo.svg';
+// eslint-disable-next-line
 import './App.css';
-// import './components/nav';
-// import './components/footer';
-// import './components/home';
-// import './components/exchange';
-// import './components/map';
+import './components/css/reset.css'
+//Connect Router
+import { Route, Switch } from "react-router-dom";
+//라우터 연결 Components
+import Exchange from './components/exchange';
+import Findway from './components/findway';
+import Faq from './components/faq';
+import Mypage from './components/mypage';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Switch>
+        <Route path="/exchange" component={Exchange} />
+        <Route path="/findway" component={Findway} />
+        <Route path="/faq" component={Faq} />
+        <Route path="/mypage" component={Mypage} />
+      </Switch>
+      
     </div>
   );
 }

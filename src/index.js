@@ -1,18 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import './components/css/reset.css'
+//고정 노출 components
 import App from './App';
-import Home from './components/home'
-import reportWebVitals from './reportWebVitals';
+import Nav from './components/nav';
+import Footer from './components/footer';
+//Connect Router
+import { BrowserRouter } from "react-router-dom";
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <React.StrictMode>
+      <BrowserRouter>
+        <Nav />
+        <App />
+        <Footer />
+      </BrowserRouter>
+    </React.StrictMode>,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
