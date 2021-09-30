@@ -23,6 +23,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 	box-sizing: border-box;
+	color: #222222; /*color 기본값 셋팅*/
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -49,3 +50,7 @@ table {
 }
 
 a {text-decoration: none;}
+
+
+/* color regist */
+.blue {color: #3477e2;}
