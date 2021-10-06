@@ -1,114 +1,86 @@
 // eslint-disable-next-line
 import React from 'react';
 import styled from 'styled-components';
+import HomeLayout from './css/layout/header';
+import { Container } from './css/content/set_default';
+import Content from './css/content/set_default';
+import TableLayout from './css/content/list';
+import Button from './css/layout/button';
+
+
 import { Link } from 'react-router-dom';
 import Banner from './banner';
 import './css/main.css';
 
-
-const exTableContainer = styled.div`
-    border-top: 1px solid #222222;
-`;
-
-const exTableList = styled.div`
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #f5f5f5;
-    padding: 0 10px;
-`;
-
-const exName = styled.div`
-    display: inline-block;
-    font-size: 16px; 
-    font-weight: 500; 
-    line-height: 40px;
-    color: #222222;
-
-    &:nth-child(1) {
-		width: 50%;
-        text-align: left;
-	}
-    &:not(first-child) {
-		text-align: right;
-	}
-`;
-
-
+const { Header, HeaderHomeTitle } = HomeLayout;
+const { ContentMidTitle, ContentBox } = Content;
+const { ExTableContainer, ExTableList, ExCountry, ExUp, ExDown } = TableLayout;
+const { ViewMoreButton } = Button;
 
 function Home() {
     return (
         <div>
-            <div className="header">
-                <div className="title big blue">EXCHANGE</div>
-            </div>
+            <Header>
+                <HeaderHomeTitle>EXCHANGE</HeaderHomeTitle>
+            </Header>
+
             <Banner />
-            <Exchange />
-            <ExchangeCalc />
-            <Guide />
+            <Container>
+                <CurrencyTableSmall />
+                <ExchangeCalc />
+                <Guide />
+            </Container>
         </div>
     );
 }
 
-function Exchange() {
+function CurrencyTableSmall() {
     return(
         <>
 
-
-        <exTableContainer>
-            <exTableList>
-            
-            </exTableList>
-            <exTableList>
-                
-            </exTableList>
-        </exTableContainer>
-        <div className="content exchange">
-            <div className="sub_tit">환율</div>
-                <div className="table_head">
+        <ContentBox>
+            <ContentMidTitle>환율</ContentMidTitle>
+            <ExTableContainer>
+                <ExTableList>
                     <div>통화명</div>
                     <div>환율</div>
                     <div>전일대비</div>
-                </div>
-                <ul>
-                    <li>
-                        <div>
-                            <span className="country blue">미국</span>
-                            <span className="currency">USD</span>
-                        </div>
-                        <div>
-                            1,146.00
-                        </div>
-                        <div>2.5</div>
-                    </li>
-                    <li>
-                        <div>
-                            <span className="country blue">일본</span>
-                            <span className="currency">JPY 100</span>
-                        </div>
-                        <div>
-                            1,060.59
-                        </div>
-                        <div>2.5</div>
-                    </li>
-                    <li>
-                        <div>
-                            <span className="country blue">중국</span>
-                            <span className="currency">CNY</span>
-                        </div>
-                        <div>
-                            180.21
-                        </div>
-                        <div>2.5</div>
-                    </li>
-                </ul>
+                    
+                </ExTableList>
+                <ExTableList>
+                    <div>
+                        <ExCountry>미국</ExCountry>
+                        USD
+                    </div>
+                    <div>1,146.00</div>
+                    <div><ExUp>2.5</ExUp></div>
+                </ExTableList>
+                <ExTableList>
+                    <div>
+                        <ExCountry>미국</ExCountry>
+                        USD
+                    </div>
+                    <div>1,146.00</div>
+                    <div><ExUp>2.5</ExUp></div>
+                </ExTableList>
+                <ExTableList>
+                    <div>
+                        <ExCountry>미국</ExCountry>
+                        USD
+                    </div>
+                    <div>1,146.00</div>
+                    <div><ExDown>2.5</ExDown></div>
+                </ExTableList>
+            </ExTableContainer>    
             <Link to="/currency">
-                <button className="btn gray">더보기</button>
+                <ViewMoreButton>더보기</ViewMoreButton>
             </Link>
-            
-        </div>
+        </ContentBox>
+
         </>
     );
 }
+
 
 function ExchangeCalc () {
     return(

@@ -1,14 +1,19 @@
 // eslint-disable-next-line
 import React, { useState } from "react";
 import CreateMap from './map';
+import HomeLayout from './layout/header';
+
+const { Header, HeaderTitle, MypageBtn} = HomeLayout;
+
 
 function Findway () {
     return (
         <div>
-            <div className="header">
-                <div className="title">오시는길</div>
-                <div className="btn_mypage">MY</div>
-            </div>
+            <Header>
+                <HeaderTitle>오시는길</HeaderTitle>
+                <MypageBtn></MypageBtn>
+            </Header>
+            
             <CreateMap />
             <Address />
         </div>

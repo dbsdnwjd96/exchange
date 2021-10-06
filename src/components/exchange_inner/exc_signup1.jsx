@@ -1,11 +1,12 @@
+// eslint-disable-next-line
 import React from 'react';
-import HomeLayout from './layout/header';
+import styled from 'styled-components';
+import HomeLayout from '../layout/header';
 
 const { Header, HeaderTitle, MypageBtn} = HomeLayout;
 
-
-function Exchange() {
-    return (
+function ExchangeSignup1 () {
+    return(
         <div>
             <Header>
                 <HeaderTitle>환전신청</HeaderTitle>
@@ -15,4 +16,4 @@ function Exchange() {
     );
 }
 
-export default Exchange;
+export default ExchangeSignup1;

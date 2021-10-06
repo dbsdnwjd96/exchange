@@ -33,10 +33,10 @@ function Banner() {
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log("slide change")}
             >
-                <SwiperSlide><img src="img/banner/t1.jpeg" alt="" /></SwiperSlide>
-                <SwiperSlide><img src="img/banner/t2.jpeg" alt="" /></SwiperSlide>
-                <SwiperSlide><img src="img/banner/t3.jpeg" alt="" /></SwiperSlide>
-                <SwiperSlide><img src="img/banner/t4.jpeg" alt="" /></SwiperSlide>
+                <SwiperSlide><img src="img/banner/t1.png" alt="" /></SwiperSlide>
+                <SwiperSlide><img src="img/banner/t2.png" alt="" /></SwiperSlide>
+                <SwiperSlide><img src="img/banner/t3.png" alt="" /></SwiperSlide>
+                <SwiperSlide><img src="img/banner/t4.png" alt="" /></SwiperSlide>
             </Swiper>
         </div>
     );

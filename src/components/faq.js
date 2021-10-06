@@ -1,13 +1,17 @@
 import React from 'react';
 import { useState } from 'react/cjs/react.development';
+import HomeLayout from './layout/header';
+
+const { Header, HeaderTitle, MypageBtn} = HomeLayout;
+
 
 function Faq() {
     return (
         <>
-        <div className="header">
-            <div className="title">FAQ</div>
-            <div className="btn_mypage">MY</div>
-        </div>
+        <Header>
+            <HeaderTitle>FAQ</HeaderTitle>
+            <MypageBtn></MypageBtn>
+        </Header>
         <Question />
         </>
 
