@@ -4,7 +4,13 @@ import React from 'react';
 
 function Mypage() {
     return (
-        <div>마이페이지</div>
+        <div>
+            <div className="header">
+                <div className="title">마이페이지</div>
+                <div className="btn_mypage">MY</div>
+            </div>
+    </div>
+
     );
 }
 

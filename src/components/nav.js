@@ -12,8 +12,8 @@ const Nav = ()=> {
       // 간단하게 만들 수 있는 방법이 무조건 있을거다....
       //img 이름 코드화 해놓고 map 돌릴때마다 link 이름이랑 같게 헤서 노출?
       <nav className="nav_wrap">
-          <Link to="/home" className="nav_link" onClick={()=> setActiveNav(1)}>
-            <img src={activeNav === 1 ? "img/gnb-home-on.png" : "img/gnb-home.png"} alt="" />
+          <Link to="/" className="nav_link" onClick={()=> setActiveNav(1)}>
+             <img src={activeNav === 1 ? "img/gnb-home-on.png" : "img/gnb-home.png"} alt="" />
             <div className={activeNav === 1 ? "blue" : null}>HOME</div>
           </Link>
           <Link to="/exchange" className="nav_link" onClick={()=> setActiveNav(2)}>
