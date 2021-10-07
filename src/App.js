@@ -1,7 +1,7 @@
 // eslint-disable-next-line
 import './App.css';
 import './components/css/reset.css'
-import GlobalStyles from './components/layout/globalStyle';
+import GlobalStyles from './components/css/layout/globalStyle';
 //Connect Router
 import { Route, Switch } from "react-router-dom";
 //라우터 연결 Components

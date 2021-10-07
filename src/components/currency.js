@@ -1,7 +1,7 @@
 // eslint-disable-next-line 
 import React from 'react';
 import styled from 'styled-components';
-import HomeLayout from './layout/header';
+import HomeLayout from './css/layout/header';
 import { Container } from './css/content/set_default';
 import Content from './css/content/set_default';
 import TableLayout from './css/content/list';
@@ -51,7 +51,9 @@ function CurrencyTable() {
                     </div>
                     <div width="25%">1,146.00</div>
                     <div><ExUp>2.5</ExUp></div>
-                    <ExchangeApplyButton />
+                    <div>
+                        <ExchangeApplyButton />
+                    </div>
                 </ExTableList>
                 <ExTableList>
                     <div>
@@ -60,7 +62,9 @@ function CurrencyTable() {
                     </div>
                     <div>1,146.00</div>
                     <div><ExUp>2.5</ExUp></div>
-                    <ExchangeApplyButton />
+                    <div>
+                        <ExchangeApplyButton />
+                    </div>
                 </ExTableList>
                 <ExTableList>
                     <div>
@@ -69,7 +73,31 @@ function CurrencyTable() {
                     </div>
                     <div>1,146.00</div>
                     <div><ExDown>2.5</ExDown></div>
-                    <ExchangeApplyButton />
+                    <div>
+                        <ExchangeApplyButton />
+                    </div>
+                </ExTableList>
+                <ExTableList>
+                    <div>
+                        <ExCountry>미국</ExCountry>
+                        USD
+                    </div>
+                    <div>1,146.00</div>
+                    <div><ExUp>2.5</ExUp></div>
+                    <div>
+                        <ExchangeApplyButton />
+                    </div>
+                </ExTableList>
+                <ExTableList>
+                    <div>
+                        <ExCountry>미국</ExCountry>
+                        USD
+                    </div>
+                    <div>1,146.00</div>
+                    <div><ExDown>2.5</ExDown></div>
+                    <div>
+                        <ExchangeApplyButton />
+                    </div>
                 </ExTableList>
             </ExTableContainer>    
         </ContentBox>

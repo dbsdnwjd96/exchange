@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react/cjs/react.development';
-import HomeLayout from './layout/header';
+import HomeLayout from './css/layout/header';
 
 const { Header, HeaderTitle, MypageBtn} = HomeLayout;
 

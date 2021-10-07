@@ -1,5 +1,5 @@
 import React from 'react';
-import HomeLayout from './layout/header';
+import HomeLayout from './css/layout/header';
 
 const { Header, HeaderTitle, MypageBtn} = HomeLayout;
 

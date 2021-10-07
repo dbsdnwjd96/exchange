@@ -18,11 +18,11 @@ const ExTableList = styled.li`
         line-height: 40px;
     
         &:nth-child(1) {
-            width: 50%;
+            width: 40%;
             text-align: left;
         }
         &:not(first-child) {
-            width: ${props => props.width ? props.width : 'auto'};
+            width: ${props => props.width ? '25%' : '20%'};
             text-align: right;
         }
     

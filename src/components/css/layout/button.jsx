@@ -1,5 +1,16 @@
 import styled from 'styled-components';
 
+const CheckButton = styled.button`
+    width: 100%;
+    height: 60px;
+    outline: none; 
+    border: none;
+    background-color: ${props => props.theme.blue}; 
+    color: #fff;
+    border-radius: 5px;
+    font-size: 18px;
+`;
+
 const ViewMoreButton = styled.button`
     width: 100%; 
     outline: none; 
@@ -22,12 +33,27 @@ const ExchangeApply = styled.button`
     background: ${props => props.theme.white}; 
 `;
 
+const SMSButton = styled.button`
+    display: inline-block;
+    margin-left: 5px;
+    width: 95px;
+    height: 60px;
+    color: #fff;
+    background: ${props => props.theme.skyblue}; 
+    vertical-aligns: top;
+    outline: none; 
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+`;
+
 export const ExchangeApplyButton = () => {
     return(
         <ExchangeApply>신청</ExchangeApply>
     );
 }
 
-const Button = { ViewMoreButton, ExchangeApplyButton }
+const Button = { CheckButton, ViewMoreButton, ExchangeApplyButton, SMSButton }
 
 export default Button;

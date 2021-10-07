@@ -26,6 +26,7 @@ function Home() {
 
             <Banner />
             <Container>
+                <ContentsTop />
                 <CurrencyTableSmall />
                 <ExchangeCalc />
                 <Guide />
@@ -45,7 +46,6 @@ function CurrencyTableSmall() {
                     <div>통화명</div>
                     <div>환율</div>
                     <div>전일대비</div>
-                    
                 </ExTableList>
                 <ExTableList>
                     <div>
@@ -146,5 +146,10 @@ function Guide () {
         </div>
     );
 }
+
+
+const ContentsTop = styled.div`
+    padding-top: 28px;
+`;
 
 export default Home;

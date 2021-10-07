@@ -1,7 +1,7 @@
 // eslint-disable-next-line
 import React, { useState } from "react";
 import CreateMap from './map';
-import HomeLayout from './layout/header';
+import HomeLayout from './css/layout/header';
 
 const { Header, HeaderTitle, MypageBtn} = HomeLayout;
 

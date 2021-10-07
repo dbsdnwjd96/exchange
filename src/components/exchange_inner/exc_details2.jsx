@@ -1,7 +1,7 @@
 // eslint-disable-next-line
 import React from 'react';
 import styled from 'styled-components';
-import HomeLayout from '../layout/header';
+import HomeLayout from '../css/layout/header';
 
 import { Link } from "react-router-dom";
 
