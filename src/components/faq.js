@@ -25,7 +25,7 @@ function Question () {
     return (
         <>
         <div className="list_box">
-            <div className="list">
+            <div className="list" isOpen>
                 <div className="question" onClick={()=> {toggleAnswer(!answer)}}>
                     영업시간이 어떻게 되나요?
                 </div>

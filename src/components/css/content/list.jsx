@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-
+//exchage currency table_box
 const ExTableContainer = styled.ul`
     border-top: 1px solid #222222;
 `;
@@ -58,6 +58,7 @@ const ExDown = ({Children}) => {
     );
 }
 
+//
 
 const TableLayout = { ExTableContainer, ExTableList, ExCountry, ExUp, ExDown }
 

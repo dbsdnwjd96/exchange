@@ -25,7 +25,7 @@ function Currency () {
                 <HeaderBackbtn />
                 <HeaderMidTitle>환율</HeaderMidTitle>
             </Header>
-            <Container>
+            <Container padding="20px 0 100px 0">
                 <CurrencyTable />
             </Container>
         </div>

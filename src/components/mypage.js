@@ -23,22 +23,22 @@ function Mypage() {
                 <MypageBtn></MypageBtn>
             </Header>
             <Container>
-                <ContentSubTitle>환전신청 내역조회</ContentSubTitle>
+                <ContentSubTitle padding="32px 0 40px 10px" >환전신청 내역조회</ContentSubTitle>
 
                 <form action="">
-                    <div className="phone">
+                    <div>
                         <InputBox width="calc(100% - 100px) !important">
-                            <input type="text" placeholder="전화번호 인증"/>
+                            <input type="text" placeholder="전화번호"/>
                         </InputBox>
                         <SMSButton>SMS 인증</SMSButton>
                     </div>
-                    <div className="password">
-                        <InputBox margin="10px 0 0 0">
+                    <div>
+                        <InputBox margin="10px 0 19px 0">
                             <input type="text" placeholder="비밀번호" />
                         </InputBox>
                     </div>
                     <Link to="/exc_datails1">
-                    <CheckButton>확인</CheckButton>
+                        <CheckButton>확인</CheckButton>
                     </Link>
                 </form>
             </Container>

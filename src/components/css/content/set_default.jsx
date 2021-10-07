@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
     margin : 0 20px;
+    padding : ${props => props.padding || ""}
 `;
 
 export const ContentMidTitle = styled.h3`

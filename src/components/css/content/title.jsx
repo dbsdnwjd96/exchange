@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const ContentSubTitle = styled.h1`
     display: block;
-    padding-top: 32px;
+    padding: ${props => props.padding || "32px 0 0 10px;"};
     font-size: 28px;
     font-weight: 700;
     line-height: 38px;
@@ -11,13 +11,14 @@ const ContentSubTitle = styled.h1`
 
 const ContentSubTitle2 = styled.h3`
     display: block;
-    padding-top: 11px;
-    font-size: 28px;
-    line-height: 38px;
+    padding-left: 10px;
+    padding-top: 10px; 
+    font-size: 18px;
+    line-height: 20px;
     text-align: left;
 
         span {
-            font-weight: 600;
+            font-weight: 800;
             color: ${props => props.theme.blue};
         }
 `;
