@@ -1,18 +1,23 @@
 import styled from 'styled-components';
 
-const CheckButton = styled.button`
-    width: 100%;
+export const CheckButton = styled.button`
+    display: inline-block;
+    padding: ${props => props.padding || ""};
+    margin: ${props => props.margin || ""};
+    width: ${props => props.width || "100%"};
     height: 60px;
     outline: none; 
     border: none;
-    background-color: ${props => props.theme.blue}; 
-    color: #fff;
-    border-radius: 5px;
+    background-color: ${props => props.bg || props.theme.blue}; 
+    color: ${props => props.color || props.theme.white};
+    border-radius: ${props => props.borderRadius || "5px"};
     font-size: 18px;
 `;
 
+
 const ViewMoreButton = styled.button`
-    width: 100%; 
+    width: ${props => props.width || "100%"};
+    height: ${props => props.height || ""};
     outline: none; 
     border: none; 
     border-radius: 5px;

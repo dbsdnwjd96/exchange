@@ -2,64 +2,111 @@
 import React from 'react';
 import styled from 'styled-components';
 import HomeLayout from '../css/layout/header';
+import Title from '../css/content/title';
+import { Container } from '../css/content/set_default';
+import Button from '../css/layout/button';
 
 
 import { Link } from "react-router-dom";
 
-const { Header, HeaderTitle, MypageBtn} = HomeLayout;
+const { Header, MypageBtn, HeaderBackbtn} = HomeLayout;
+const {ContentSubTitleDetail} = Title;
+const { CheckButton } = Button;
+
+
+const ExChkListBox = styled.ul`
+    display: block;
+    padding: 5px 0;
+    border-top : 1px solid ${props => props.theme.black};
+    border-bottom : 1px solid ${props => props.theme.black};
+`;
+
+const ExChkList = styled.li`
+    display: flex;
+    justify-content: space-between;
+    alignconsole.log();-items: center;
+    border-bottom: 1px solid ${props => props.theme.gray1};
+    font-size: 16px;
+    line-height: 40px;
+    padding: 0 5px;
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    > div {
+        display: inline-block;
+        
+        &:first-child {
+            color: ${props => props.theme.gray2};
+        }
+    }
+`;
+
+const ButtonBox = styled.div`
+    display: block;
+    width: 100%;
+    padding: ${props => props.padding || "" };
+    margin: ${props => props.margin || "" };
+`;
+
+
+
 
 function ExchangeDetails2 () {
     return(
         <div>
             <Header>
-                <HeaderTitle>환전신청</HeaderTitle>
+                <HeaderBackbtn />
                 <MypageBtn></MypageBtn>
             </Header>
-            <div>
-                <div>정문학님</div>
-                <div>환전 신청 내역</div>
-            </div>
-            <ul>
-                <li>
-                    <div>통화명</div>
-                    <div>미국 USD</div>
-                </li>
-                <li>
-                    <div>환전금액</div>
-                    <div>1,000$</div>
-                </li>
-                <li>
-                    <div>신청일</div>
-                    <div>2021.08.10</div>
-                </li>
-                <li>
-                    <div>입금금액</div>
-                    <div>1,154,160원</div>
-                </li>
-                <li>
-                    <div>입금여부</div>
-                    <div>입금취소</div>
-                </li>
-                <li>
-                    <div>입금계좌</div>
-                    <div>한국은행 111-11-1111 정문학</div>
-                </li>
-                <li>
-                    <div>입금일</div>
-                    <div>2021.08.10 20:00</div>
-                </li>
-                <li>
-                    <div>수령여부</div>
-                    <div>미수령</div>
-                </li>
-            </ul>
-            <div>    
-                <Link to="/manager_chk">
-                    <button type="submit" className="btnBlue">관리자 확인</button>
-                </Link>
-                <button >목록</button>
-            </div>
-
+            <Container>
+                <div>
+                    <ContentSubTitleDetail>정문학님 <br></br> 환전 신청 내역</ContentSubTitleDetail>
+                </div>
+                <ExChkListBox>
+                    <ExChkList>
+                        <div>통화명</div>
+                        <div>미국 USD</div>
+                    </ExChkList>
+                    <ExChkList>
+                        <div>환전금액</div>
+                        <div>1,000$</div>
+                    </ExChkList>
+                    <ExChkList>
+                        <div>신청일</div>
+                        <div>2021.08.10</div>
+                    </ExChkList>
+                    <ExChkList>
+                        <div>입금금액</div>
+                        <div>1,154,160원</div>
+                    </ExChkList>
+                    <ExChkList>
+                        <div>입금여부</div>
+                        <div>입금취소</div>
+                    </ExChkList>
+                    <ExChkList>
+                        <div>입금계좌</div>
+                        <div>한국은행 111-11-1111 정문학</div>
+                    </ExChkList>
+                    <ExChkList>
+                        <div>입금일</div>
+                        <div>2021.08.10 20:00</div>
+                    </ExChkList>
+                    <ExChkList>
+                        <div>수령여부</div>
+                        <div>미수령</div>
+                    </ExChkList>
+                </ExChkListBox>
+                <ButtonBox padding="40px 0 95px">    
+                    <Link to="/manager_chk">
+                        <CheckButton width="calc(100% - 78px)">관리자 확인</CheckButton>
+                    </Link>
+                    <Link to="/exc_datails1">
+                    <CheckButton margin="0 0 0 5px" width="73px" bg="${props.theme.gray1}" color="${props.theme.font}">목록</CheckButton>
+                    </Link>
+                </ButtonBox>
+            </Container>
         </div>
     );
 }

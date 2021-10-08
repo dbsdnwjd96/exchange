@@ -50,7 +50,9 @@ function CurrencyTable() {
                         USD
                     </div>
                     <div width="25%">1,146.00</div>
-                    <div><ExUp>2.5</ExUp></div>
+                    <div><ExUp>
+                        <div class="test">2.5</div>
+                        </ExUp></div>
                     <div>
                         <ExchangeApplyButton />
                     </div>

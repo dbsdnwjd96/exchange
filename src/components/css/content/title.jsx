@@ -25,6 +25,7 @@ const ContentSubTitle2 = styled.h3`
 
 const ContentSubTitleDetail = styled.h1`
     display: block;
+    padding: 36px 0 31.4px 10px;
     font-size: 24px;
     line-height: 28px;
     text-align: left;

@@ -16,7 +16,7 @@ const InputBox = styled.div`
             outline: none;
             width: 100%;
             &::placeholder {
-                font-size: 16px;
+                font-size: ${props => props.fontSize || "16px"};
                 color: ${props => props.theme.font}; 
             }
         }

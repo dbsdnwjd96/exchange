@@ -41,19 +41,20 @@ const ExImg = styled.img`
 `;
 
 
-const ExUp = ({Children}) => {
+const ExUp = ({children}) => {
+    console.log(children)
     return(
         <>
             <ExImg src="img/icon-up.png" alt="" />
-            <span style = {{color : "#ff2929" }}>{Children}</span>
+            <span style = {{color : "#ff2929" }}>{children}</span>
         </>
     );
 }
-const ExDown = ({Children}) => {
+const ExDown = ({children}) => {
     return(
         <>
             <ExImg src="img/icon-down.png" alt="" />
-            <span style = {{color : "{props.theme.blue}" }}>{Children}</span>
+            <span style = {{color : "${props.theme.blue}" }}>{children}</span>
         </>
     );
 }
