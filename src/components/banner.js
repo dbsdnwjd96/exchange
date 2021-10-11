@@ -1,6 +1,5 @@
 // eslint-disable-next-line
 import React from 'react';
-import './css/swiper.css';
 
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles

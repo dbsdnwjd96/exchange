@@ -3,18 +3,18 @@ import React from 'react';
 import styled from 'styled-components';
 import HomeLayout from './css/layout/header';
 import { Container } from './css/content/set_default';
-import Content from './css/content/set_default';
+import { ContentBox } from './css/content/set_default';
 import TableLayout from './css/content/list';
 import Button from './css/layout/button';
+import { ExchangeCalc } from './css/content/exchangeCalc';
 
 
 import { Link } from 'react-router-dom';
-import Banner from './banner';
+import Banner from './banner';//swiper
 import './css/main.css';
 
 const { Header, HeaderHomeTitle } = HomeLayout;
-const { ContentMidTitle, ContentBox } = Content;
-const { ExTableContainer, ExTableList, ExCountry, ExUp, ExDown } = TableLayout;
+const { ExTableContainer, ExTableList, ExCountry } = TableLayout;
 const { ViewMoreButton } = Button;
 
 function Home() {
@@ -23,10 +23,8 @@ function Home() {
             <Header>
                 <HeaderHomeTitle>EXCHANGE</HeaderHomeTitle>
             </Header>
-
             <Banner />
             <Container>
-                <ContentsTop />
                 <CurrencyTableSmall />
                 <ExchangeCalc />
                 <Guide />
@@ -38,118 +36,150 @@ function Home() {
 function CurrencyTableSmall() {
     return(
         <>
-
-        <ContentBox>
-            <ContentMidTitle>환율</ContentMidTitle>
+        <ContentBox padding="28px 0 30px;">
+            <h3>환율</h3>
             <ExTableContainer>
                 <ExTableList>
-                    <div>통화명</div>
-                    <div>환율</div>
-                    <div>전일대비</div>
+                    <div className="currency_nm">통화명</div>
+                    <div className="currency_rate">환율</div>
+                    <div className="compare">전일대비</div>
                 </ExTableList>
                 <ExTableList>
-                    <div>
-                        <ExCountry>미국</ExCountry>
+                    <div className="currency_nm">
+                        <span>미국</span>
                         USD
                     </div>
-                    <div>1,146.00</div>
-                    <div><ExUp>2.5</ExUp></div>
+                    <div className="currency_rate">1,146.00</div>
+                    <div className="compare"> <span className="up">2.5</span> </div>
                 </ExTableList>
                 <ExTableList>
-                    <div>
-                        <ExCountry>미국</ExCountry>
-                        USD
+                    <div className="currency_nm">
+                        <span>일본</span>
+                        JPY 100
                     </div>
-                    <div>1,146.00</div>
-                    <div><ExUp>2.5</ExUp></div>
+                    <div className="currency_rate">1,060.59</div>
+                    <div className="compare"> <span className="down">2.5</span> </div>
                 </ExTableList>
                 <ExTableList>
-                    <div>
-                        <ExCountry>미국</ExCountry>
-                        USD
+                    <div className="currency_nm">
+                        <span>중국</span>
+                        CNY
                     </div>
-                    <div>1,146.00</div>
-                    <div><ExDown>2.5</ExDown></div>
+                    <div className="currency_rate">180.21</div>
+                    <div className="compare"> <span className="down">2.5</span> </div>
                 </ExTableList>
+
+
             </ExTableContainer>    
             <Link to="/currency">
                 <ViewMoreButton>더보기</ViewMoreButton>
             </Link>
         </ContentBox>
-
         </>
-    );
-}
-
-
-function ExchangeCalc () {
-    return(
-        <div className="content calc">
-            <div className="sub_tit">환전 계산기</div>
-            <div className="c_other">
-                {/* 어떡하지 ㅇ<<... */}
-                <select name="" id="">
-                    <option value="미국">미국 USD</option>
-                </select>
-                <div>
-                    <input type="text" />
-                </div>
-            </div>
-            <div className="info">* 1일 신청 한도 : $300 ~ $1,980 / 20단위 신청 가능</div>
-            <div className="c_my">
-                <div className="img"><img src="img/krw.png" alt="" /></div>
-                <span>KRW</span>
-                <input type="text" />
-            </div>
-        </div>
     );
 }
 
 function Guide () {
     return(
-        <div className="content guide">
-            <div className="sub_tit">이용안내</div>
+        <ContentBox padding="30px 0;">
+            <h3>이용안내</h3>
             <ul>
-                <li>
-                    <span className="blue">01</span>
+                <GuideList>
+                    <span>01</span>
                     <p>출국일을 선택하고</p>
                     <div className="img">
                         <img src="img/guide/step1.png" alt="" />
                     </div>
-                </li>
-                <li>
-                    <span className="blue">02</span>
+                </GuideList>
+                <GuideList>
+                    <span>02</span>
                     <p>환전신청을 합니다.</p>
                     <div className="img">
                         <img src="img/guide/step2.png" alt="" />
                     </div>
-                </li>
-                <li>
-                    <span className="blue">03</span>
+                </GuideList>
+                <GuideList>
+                    <span>03</span>
                     <p>공항 도착후 안내된 번호로 전화하면</p>
                     <div className="img">
                         <img src="img/guide/step3.png" alt="" />
                     </div>
-                </li>
-                <li>
-                    <span className="blue">04</span>
+                </GuideList>
+                <GuideList>
+                    <span>04</span>
                     <p>10분 내로 외화를 받게 됩니다.</p>
                     <div className="img">
                         <img src="img/guide/step4.png" alt="" />
                     </div>
-                </li>
+                </GuideList>
             </ul>
-            <div>
+            <GuideWarn>
                 <span>잠깐!</span>
                 공항에 도착해서 신청하셔도 됩니다.
-            </div>
-        </div>
+            </GuideWarn>
+        </ContentBox>
     );
 }
 
+const GuideList = styled.div`
+    position: relative; 
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 5px; 
+    padding: 16px;  
+    width: 100%; 
+    height: 68px; 
+    border: 1px solid #f5f5f5; 
+    border-radius: 5px;
 
-const ContentsTop = styled.div`
-    padding-top: 28px;
+    > span {
+        display: inline-block; 
+        margin-right: 16px; 
+        font-size: 20px; 
+        font-weight: 800; 
+        line-height: 29px;
+        color: ${props => props.theme.blue};    
+    }
+
+    > p {
+        width: 70%;
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .img {
+        position: absolute; 
+        width: 40px; 
+        height: 38px;  
+        right: 21.4px;
+
+        > img {
+            width: 100%; 
+            height: 100%;
+        }
+    }
 `;
+
+const GuideWarn = styled.div`
+    padding-top: 21px; 
+    font-size: 14px; 
+    color: #222222; 
+    text-align: left;
+
+    > span {
+        display: inline-block; 
+        margin-right: 7px; 
+        width: 48px; 
+        height: 26px; 
+        font-size: 14px; 
+        font-weight: 600; 
+        line-height: 27px; 
+        background: #41e3f0; 
+        color: #fff; 
+        text-align: center; 
+        border-radius: 20px;
+    }
+`;
+
 
 export default Home;

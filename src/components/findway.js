@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import CreateMap from './map';
 import HomeLayout from './css/layout/header';
+import styled from "styled-components";
 
 const { Header, HeaderTitle, MypageBtn} = HomeLayout;
 
@@ -24,7 +25,7 @@ function Address() {
 
 
     return (
-        <div className="address">
+        <AddressList>
             <ul>
                 <li>
                     <div>주소</div>
@@ -39,9 +40,44 @@ function Address() {
                     <span>4호선 명동역 5번출구 200M<br></br> 2호선 을지로입구역 6번 출구 500M</span>
                 </li>
             </ul>
-        </div>
+        </AddressList>
     );
 }
+
+const AddressList = styled.div`
+    padding: 10px 0 60px;
+
+    > ul {
+        > li {
+            display: flex; 
+            justify-content: 
+            space-between; 
+            padding: 17px 0px 18px; 
+            margin: 0 20px; 
+            border-bottom: 1px solid #f5f5f5;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            > div {
+                width: 100px; 
+                text-align: left; 
+                font-size: 16px; 
+                font-weight: 800; 
+                line-height: 18px; 
+                vertical-align: top;
+            }
+
+            > span {
+                width: calc(100% -100px); 
+                text-align: right; 
+                line-height: 18px;
+            }
+        }
+
+    }
+`;
 
 
 export default Findway;

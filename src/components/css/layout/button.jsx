@@ -28,15 +28,6 @@ const ViewMoreButton = styled.button`
     font-size: 14px; 
 `;
 
-const ExchangeApply = styled.button`
-    margin-top: 3px;
-    width: 40px;
-    height: 35px;
-    border: 1px solid #cad9f0; 
-    border-radius: 5px;
-    color : ${props => props.theme.blue};
-    background: ${props => props.theme.white}; 
-`;
 
 const SMSButton = styled.button`
     display: inline-block;

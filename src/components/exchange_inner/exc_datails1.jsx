@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import HomeLayout from '../css/layout/header';
 import Title from '../css/content/title';
-import { Container } from '../css/content/set_default';
+import {Container} from '../css/content/set_default';
 
 import { Link } from 'react-router-dom';
 
@@ -73,6 +73,7 @@ const ImgBox = styled.div`
         height: 100%;
     }
 `;
+
 
 function ExchangeDetails1 () {
     return(

@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import HomeLayout from './css/layout/header';
 import { Container } from './css/content/set_default';
-import Content from './css/content/set_default';
+import { ContentBox } from './css/content/set_default';
 import TableLayout from './css/content/list';
 import Button from './css/layout/button';
 
@@ -11,7 +11,6 @@ import { Link } from 'react-router-dom';
 
 const { Header, HeaderMidTitle, HeaderBackbtn} = HomeLayout;
 
-const { ContentMidTitle, ContentBox } = Content;
 const { ExTableContainer, ExTableList, ExCountry, ExUp, ExDown } = TableLayout;
 const { ExchangeApplyButton } = Button;
 
@@ -38,69 +37,53 @@ function CurrencyTable() {
 
         <ContentBox>
             <ExTableContainer>
-                <ExTableList>
-                    <div>통화명</div>
-                    <div>환율</div>
-                    <div>전일대비</div>
-                    <div>환전</div>
+                <ExTableList padding="0">
+                    <div className="currency_nm">통화명</div>
+                    <div className="currency_rate">환율</div>
+                    <div className="compare">전일대비</div>
+                    <div className="apply_btn">환전</div>
                 </ExTableList>
-                <ExTableList>
-                    <div>
-                        <ExCountry>미국</ExCountry>
+                <ExTableList padding="10.5px 0 8px">
+                    <div className="currency_nm">
+                        <img src="img/usd.png" alt="" />
+                        <span>일본</span>
+                        JYP
+                    </div>
+                    <div className="currency_rate">1,146.00</div>
+                    <div className="compare"> <span className="up">2.5</span> </div>
+                    <div className="apply_btn"><ExchangeApplyButton /></div>
+                </ExTableList>
+                <ExTableList padding="10.5px 0 8px">
+                    <div className="currency_nm">
+                        <img src="img/usd.png" alt="" />
+                        <span>미국</span>
                         USD
                     </div>
-                    <div width="25%">1,146.00</div>
-                    <div><ExUp>
-                        <div class="test">2.5</div>
-                        </ExUp></div>
-                    <div>
-                        <ExchangeApplyButton />
-                    </div>
+                    <div className="currency_rate">1,146.00</div>
+                    <div className="compare"> <span className="up">2.5</span> </div>
+                    <div className="apply_btn"><ExchangeApplyButton /></div>
                 </ExTableList>
-                <ExTableList>
-                    <div>
-                        <ExCountry>미국</ExCountry>
+                <ExTableList padding="10.5px 0 8px">
+                    <div className="currency_nm">
+                        <img src="img/usd.png" alt="" />
+                        <span>미국</span>
                         USD
                     </div>
-                    <div>1,146.00</div>
-                    <div><ExUp>2.5</ExUp></div>
-                    <div>
-                        <ExchangeApplyButton />
-                    </div>
+                    <div className="currency_rate">1,146.00</div>
+                    <div className="compare"> <span className="up">2.5</span> </div>
+                    <div className="apply_btn"><ExchangeApplyButton /></div>
                 </ExTableList>
-                <ExTableList>
-                    <div>
-                        <ExCountry>미국</ExCountry>
+                <ExTableList padding="10.5px 0 8px">
+                    <div className="currency_nm">
+                        <img src="img/usd.png" alt="" />
+                        <span>미국</span>
                         USD
                     </div>
-                    <div>1,146.00</div>
-                    <div><ExDown>2.5</ExDown></div>
-                    <div>
-                        <ExchangeApplyButton />
-                    </div>
+                    <div className="currency_rate">1,146.00</div>
+                    <div className="compare"> <span className="up">2.5</span> </div>
+                    <div className="apply_btn"><ExchangeApplyButton /></div>
                 </ExTableList>
-                <ExTableList>
-                    <div>
-                        <ExCountry>미국</ExCountry>
-                        USD
-                    </div>
-                    <div>1,146.00</div>
-                    <div><ExUp>2.5</ExUp></div>
-                    <div>
-                        <ExchangeApplyButton />
-                    </div>
-                </ExTableList>
-                <ExTableList>
-                    <div>
-                        <ExCountry>미국</ExCountry>
-                        USD
-                    </div>
-                    <div>1,146.00</div>
-                    <div><ExDown>2.5</ExDown></div>
-                    <div>
-                        <ExchangeApplyButton />
-                    </div>
-                </ExTableList>
+
             </ExTableContainer>    
         </ContentBox>
 

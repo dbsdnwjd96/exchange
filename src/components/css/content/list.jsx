@@ -9,23 +9,89 @@ const ExTableList = styled.li`
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #f5f5f5;
-    padding: 0 10px;
+    padding: ${props => props.padding || "0 10px"};
 
     > div {
         display: inline-block;
+        width: ${props => props.width || ""};
         font-size: 16px; 
         font-weight: 500; 
         line-height: 40px;
     
-        &:nth-child(1) {
-            width: 40%;
+        &:first-child {
             text-align: left;
         }
         &:not(first-child) {
-            width: ${props => props.width ? '25%' : '20%'};
             text-align: right;
         }
-    
+        
+        &.currency_nm {
+            width: 33%;
+
+            > span {
+                display : inline-block;
+                color : ${props => props.theme.blue};
+                margin-right : 5px;
+            }
+
+            > img {
+                display: inline-block;
+                margin-right: 7px;
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                vertical-align: middle;
+            }
+        }
+        &.currency_rate {
+            width: 30%
+        }
+        &.compare {
+            position: relative;
+            width: 73px;
+
+            > span {
+                position: relative;
+                font-weight: 800;
+
+                &.up {
+                    color: ${props => props.theme.red};
+                    &::before {
+                        position:absolute;
+                        display: block;
+                        content: '';
+                        width: 12px;
+                        height: 8px;
+                        top: 50%;
+                        left: -20px;
+                        transform: translateY(-50%);
+                        background: url(img/icon-up.png) no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                }
+                &.down {
+                    color: ${props => props.theme.blue};
+                    &::before {
+                        position:absolute;
+                        display: block;
+                        content: '';
+                        width: 12px;
+                        height: 8px;
+                        top: 50%;
+                        left: -20px;
+                        transform: translateY(-50%);
+                        background: url(img/icon-down.png) no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                    }
+                }
+            }
+        }
+        &.apply_btn {
+            display: inline-block;
+            width: 50px;
+        }
     }
 `;
 
@@ -38,30 +104,12 @@ const ExCountry = styled.span`
 const ExImg = styled.img`
     width : 12px;
     height : 8px;
+
 `;
 
 
-const ExUp = ({children}) => {
-    console.log(children)
-    return(
-        <>
-            <ExImg src="img/icon-up.png" alt="" />
-            <span style = {{color : "#ff2929" }}>{children}</span>
-        </>
-    );
-}
-const ExDown = ({children}) => {
-    return(
-        <>
-            <ExImg src="img/icon-down.png" alt="" />
-            <span style = {{color : "${props.theme.blue}" }}>{children}</span>
-        </>
-    );
-}
 
-//
-
-const TableLayout = { ExTableContainer, ExTableList, ExCountry, ExUp, ExDown }
+const TableLayout = { ExTableContainer, ExTableList, ExCountry}
 
 export default TableLayout;
 

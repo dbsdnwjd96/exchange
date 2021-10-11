@@ -5,6 +5,7 @@ import HomeLayout from '../css/layout/header';
 import Title from '../css/content/title';
 import { Container } from '../css/content/set_default';
 import Button from '../css/layout/button';
+import ExchangeCheckList from '../css/content/list2';
 
 
 import { Link } from "react-router-dom";
@@ -12,36 +13,8 @@ import { Link } from "react-router-dom";
 const { Header, MypageBtn, HeaderBackbtn} = HomeLayout;
 const {ContentSubTitleDetail} = Title;
 const { CheckButton } = Button;
+const {ExChkListBox, ExChkList} = ExchangeCheckList;
 
-
-const ExChkListBox = styled.ul`
-    display: block;
-    padding: 5px 0;
-    border-top : 1px solid ${props => props.theme.black};
-    border-bottom : 1px solid ${props => props.theme.black};
-`;
-
-const ExChkList = styled.li`
-    display: flex;
-    justify-content: space-between;
-    alignconsole.log();-items: center;
-    border-bottom: 1px solid ${props => props.theme.gray1};
-    font-size: 16px;
-    line-height: 40px;
-    padding: 0 5px;
-
-    &:last-child {
-        border-bottom: none;
-    }
-
-    > div {
-        display: inline-block;
-        
-        &:first-child {
-            color: ${props => props.theme.gray2};
-        }
-    }
-`;
 
 const ButtonBox = styled.div`
     display: block;
